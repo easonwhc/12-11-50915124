@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>空氣品質 AQI 資訊</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body {
+            background-color: #f4f6f9;
+        }
+
+        .header-gradient {
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+        }
+
+        .card-custom {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .card-custom:hover {
+            transform: translateY(-5px);
+        }
+
+        .table-hover tbody tr:hover {
+            background-color: rgba(0, 123, 255, 0.1);
+        }
+
+        .btn-custom {
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <li class="nav-item navbar-nav ms-auto">
+                <a class="nav-link" href="/index.html">首頁</a>
+            </li>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/stock/stock.html">股票數據</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/aqi/aqi.html">空氣品質 (AQI)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/mars_rover/mars_rover.html">火星照片</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="header-gradient text-white text-center py-4 mb-4 shadow">
+        <div class="container">
+            <h1 class="display-5 fw-bold">
+                <i class="bi bi-cloud-sun me-2"></i>空氣品質 AQI 資訊
+            </h1>
+            <p class="lead">即時環境監測數據</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card card-custom mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h2 class="mb-0">
+                            <i class="bi bi-search me-2"></i>查詢列表
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <form id="query-form" class="row g-3">
+                            <div class="col-md-6 col-lg-4">
+                                <label for="site-name" class="form-label">
+                                    <i class="bi bi-geo-alt-fill me-1"></i>監測站名稱
+                                </label>
+                                <input type="text" class="form-control" id="site-name" placeholder="請輸入監測站名稱">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card card-custom">
+                    <div class="card-header bg-success text-white">
+                        <h2 class="mb-0">
+                            <i class="bi bi-table me-2"></i>空氣品質數據表
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="aqi-table" class="table table-bordered table-hover table-striped">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>站點 ID</th>
+                                        <th>監測站名稱</th>
+                                        <th>監測日期</th>
+                                        <th>AQI</th>
+                                        <th>SO₂ 指數</th>
+                                        <th>CO 指數</th>
+                                        <th>O₃ 指數</th>
+                                        <th>PM₁₀ 指數</th>
+                                        <th>NO₂ 指數</th>
+                                        <th>PM₂.₅ 指數</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- 動態數據填充 -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+        <div class="container">
+            <p class="mb-0">
+                <i class="bi bi-cloud-haze2 me-1"></i>
+                © 2024 AQI 資訊平台 | 僅供參考
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="aqi.js"></script>
+</body>
+
+</html>

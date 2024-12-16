@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>即時數據平台</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body {
+            background-color: #f4f6f9;
+        }
+
+        .navbar-custom {
+            background: linear-gradient(to right, #007bff, #00aaff);
+        }
+
+        .navbar-custom .navbar-brand,
+        .navbar-custom .nav-link {
+            color: white;
+        }
+
+        .navbar-custom .nav-link:hover {
+            color: #ffc107;
+        }
+
+        .card-custom {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .card-custom:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- 導航欄 -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <li class="nav-item navbar-nav ms-auto">
+                <a class="nav-link" href="/index.html">首頁</a>
+            </li>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/stock/stock.html">股票數據</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/aqi/aqi.html">空氣品質 (AQI)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/mars_rover/mars_rover.html">火星照片</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- 卡片區域 -->
+    <div class="container my-5">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- 卡片 1 -->
+            <div class="col">
+                <div class="card card-custom">
+                    <img src="image\stcok.jpg" class="card-img-top" alt="Card image 1">
+                    <div class="card-body">
+                        <h5 class="card-title">股票數據</h5>
+                        <p class="card-text">即時提供各類股票市場的數據與資訊，幫助您掌握最新動態。</p>
+                        <a href="stock\stock.html" class="btn btn-primary">了解更多</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 卡片 2 -->
+            <div class="col">
+                <div class="card card-custom">
+                    <img src="image\aqi.jpg" class="card-img-top" alt="Card image 2">
+                    <div class="card-body">
+                        <h5 class="card-title">空氣品質 (AQI)</h5>
+                        <p class="card-text">查詢各地即時的空氣品質指數，了解空氣污染狀況。</p>
+                        <a href="aqi\aqi.html" class="btn btn-primary">了解更多</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 卡片 3 -->
+            <div class="col">
+                <div class="card card-custom">
+                    <img src="image\NASA_Mars_Rover.jpg" class="card-img-top" alt="Card image 3">
+                    <div class="card-body">
+                        <h5 class="card-title">火星照片</h5>
+                        <p class="card-text">探索NASA火星探測器拍攝的壯麗照片，了解火星的神秘景觀。</p>
+                        <a href="mars_rover\mars_rover.html" class="btn btn-primary">了解更多</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入 Bootstrap JavaScript 和 jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
